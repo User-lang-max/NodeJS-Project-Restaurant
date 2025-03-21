@@ -24,7 +24,7 @@ login.html: first page that allows you to login as a admin/user (for admin the u
 ## Installation
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/NodeJS-Project-Restaurant.git
+   git clone https://github.com/User-lang-max/NodeJS-Project-Restaurant.git
    cd NodeJS-Project-Restaurant
    ```
 2. **Install dependencies**:
