@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Utilisateurs</title>
+    <link rel="stylesheet" href="ADMIN.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">Gestion Admin</div>
+            <div class="nav-links">
+                <a href="#" onclick="accueil()"><i class="fas fa-home"></i><span>Accueil</span></a>
+                <a href="#" onclick="principale()"><i class="fas fa-users"></i><span>Page principale</span></a>
+                <a href="#" onclick="commd()"><i class="fas fa-shopping-cart"></i><span>Commandes</span></a>
+                <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i><span>Déconnexion</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="content">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col text-end">
+                    <button class="newUser">Nouvelle Résérvation</button>
+                </div>
+            </div>
+            <!-- Total Reservations Per Day Card -->
+            <div class="card" id="totalReservationsCard">
+                <div class="card-content">
+                    <h3><i class="fas fa-calendar-check"></i> Total Reservations </h3>
+                    <div class="reservation-number">
+                        <i class="fas fa-user-check"></i>
+                        <span id="totalReservations">0</span>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="card" id="totalOrdersCard">
+                <div class="card-content">
+                    <h3><i class="fas fa-shopping-cart"></i> Total Commandes </h3>
+                    <div class="reservation-number">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="totalOrders">6</span>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+
+            <div class="card" id="totalReservationsCard">
+                <div class="card-content">
+                    <h3><i class="fas fa-calendar-check"></i> Total Clients </h3>
+                    <div class="reservation-number">
+                        <i class="fas fa-user-check"></i>
+                        <span id="user-count">0</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Chart -->
+            <div class="chart">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="chart" id="myPieChart">
+                <canvas id="myPieChartCanvas" ></canvas>
+            </div>
+            
+            <!-- User Table -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Âge</th>
+                        <th>Prénom</th>
+                        <th>Email</th>
+                        <th>Téléphone</th>
+                        <th>Heure</th>
+                        <th>Date de Début</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="data"></tbody>
+            </table>
+            
+
+            <div class="Container">
+                    <div class="carousel">
+                    <div class="carousel-item">
+                        <img alt="A beautifully plated dish with vibrant colors and garnishes" height="400" src="images/pic3.jpg" width="800"/>
+                        <div class="legend">
+                            <h2>Notre Esthétique Culinaire</h2>
+                            <p>Un plat délicatement dressé, riche en couleurs vives et agrémenté de garnitures fraîches.</p>
+                        </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="Un intérieur de restaurant chaleureux avec un éclairage doux et une décoration élégante" height="400" src="images/pic2.jpg" width="800"/>
+                            <div class="legend">
+                                <h2>Notre Ambiance Accueillante</h2>
+                                <p>Un intérieur de restaurant cosy, baigné d'une lumière douce.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="Un cocktail rafraîchissant avec une tranche de citron vert et des feuilles de menthe" height="400" src="images/PIC5.jpg" width="800"/>
+                            <div class="legend">
+                                <h2>Nos Tables de Dîner Élégantes</h2>
+                                <p>Un cocktail rafraîchissant, parfait pour accompagner un repas élégant.</p>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Form -->
+    <div class="modal" id="userForm">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="myForm">
+                <div>
+                    <label for="name">Nom:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div>
+                    <label for="age">Âge:</label>
+                    <input type="number" id="age" required min="16" max="90">
+                </div>
+                <div>
+                    <label for="prenom">Prénom:</label>
+                    <input type="text" id="prenom" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div>
+                    <label for="phone">Téléphone:</label>
+                    <input type="text" id="phone" required>
+                </div>
+                <div>
+                    <label for="heure">Heure:</label>
+                    <input type="time" id="heure" required>
+                </div>
+                <div>
+                    <label for="sDate">Date de Début:</label>
+                    <input type="date" id="sDate" required>
+                </div>
+                <button type="submit" class="submit">Enregistrer</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="ADMIN.js"></script>
+</body>
+</html>

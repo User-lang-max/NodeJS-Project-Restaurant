@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RESTAURANT</title>
+    <link rel="stylesheet" type="text/css" href="client_page.css">
+    <!---font awesome--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+<header>
+    <div id="navbar">
+        <img src="images/logo.jpg"alt="logo">
+        <nav>
+            <ul>
+                <li><a href="#navbar">HOME</a></li> 
+                <li><a href="#about">A propos</a></li><!---#... move from section to section --->
+                <li><a href="#menu">Notre Menu</a></li>
+                <li><a href="#offers">Nos offres</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <h1></h1>
+        <p></p>
+       <!-- Exemple de bouton "Réserver une table" -->
+   <!-- Bouton Réserver une table -->
+    
+<a href="#" class="btn btn-primary" id="openModalBtn">Réserver une table</a>
+
+<!-- Modal -->
+<div id="reservationModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Réservez votre table</h2>
+        <form id="reservationForm">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Numéro de téléphone</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="date">Date de réservation</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Heure</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="guests">Nombre de personnes</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+
+            <button type="submit" class="btn btn-primary">Réserver maintenant</button>
+        </form>
+    </div>
+</div>
+
+    </div>
+    
+</header>
+<main>
+    <!---about start--->
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <div>
+                    <p>
+                        Fondé en 1990, Mavi a su s'élever au rang de restaurant prestigieux à Casablanca. Notre établissement se distingue par l'excellence de ses produits, un service impeccable et une atmosphère conviviale, où les convives peuvent s'immerger dans la découverte de nouvelles spécialités culinaires, dans un environnement chaleureux et accueillant.
+                    </p>
+                    <p>
+                        Notre menu, varié et saisonnier, est élaboré à partir d'ingrédients frais, offrant un large éventail de choix pour satisfaire toutes les préférences gastronomiques. Mavi offre également à ses clients un cadre exceptionnel, avec une vue magnifique sur l'océan depuis sa splendide terrasse. En soirée, une ambiance enchanteresse règne, animée par un DJ, créant ainsi des souvenirs inoubliables pour nos distingués convives.
+                    </p>
+                    <a href="#" class="btn btn-secondary">Plus d'informations</a>
+                </div>
+                <img src="images/about4.PNG" alt="plats">
+            </div>
+        </div>
+    </section>
+    <!---about end--->
+    <!---offers start--->
+    <section id="offers">
+        <div class="container">
+            <div class="offers-items">
+                <div>
+                    <img src="images/paella2.PNG" alt="">
+                    <div>
+                        <h3>Paella espagnole</h3>
+                        <p>
+                            Découvrez notre délicieuse paella espagnole, un plat traditionnel riche en saveurs méditerranéennes.
+                        </p>
+                        <p><del>100.00$</del><span class="primary-text">55.00$</span></p>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/tartare2.PNG" alt="">
+                    <div>
+                        <h3>Tartare de saumon</h3>
+                        <p>
+                            Laissez-vous séduire par notre tartare de saumon frais, une véritable symphonie de fraîcheur et de goût. 
+                        </p>
+                        <p><del>65.00$</del><span class="primary-text">35.00$</span></p>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/fish.PNG" alt="">
+                    <div>
+                        <h3>Assiette de poisson </h3>
+                        <p>
+                            Savourez notre généreuse assiette de fruits de mer variée, une invitation au festin marin.
+                        </p>
+                        <p><del>150.00$</del><span class="primary-text">100.00$</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---offers end--->
+    <!---menu start--->
+   <div class="menu">
+     <div class="title1">
+                <h2>Notre Menu spécial du jour</h2>
+                <p>Petit-déjeuner</p>
+            </div>
+    <!-- Plat 1 -->
+    <input type="checkbox" id="toggle-plat1" class="toggle-input">
+    <label for="toggle-plat1" class="menu-item">
+        <img src="images/pd1a.PNG" alt="Plat 1">
+        <div class="menu-details">
+            <h3>Le Pack Essentiel</h3>
+            <span>10€/pers</span>
+            <div class="submenu">
+                <ul>
+                    <li>2 Boissons / personne
+                        Boisson chaude (café ou thé)
+                        Jus d’orange pressé</li>
+                    <li>3 Viennoiseries / personne
+                        Mini pain au chocolat
+                        Mini croissant
+                        Mini pain aux raisins</li>
+                </ul>
+            </div>
+        </div>
+    </label>
+
+    <!-- Plat 2 -->
+    <input type="checkbox" id="toggle-plat2" class="toggle-input">
+    <label for="toggle-plat2" class="menu-item">
+        <img src="images/pd2 test.PNG" alt="Plat 2">
+        <div class="menu-details">
+            <h3>Formule Confort</h3>
+            <span>20€/pers</span>
+            <div class="submenu">
+                <ul>
+                    <li>2 Boissons / personne
+                    Boisson chaude (café ou thé)
+                    Jus d’orange pressé</li>
+                    <li>4 Accompagnements / personne
+                     Mini pain au chocolat
+                     Mini croissant
+                     Mini pain aux raisins
+                     Verrine de fruits frais</li>
+                </ul>
+            </div>
+        </div>
+    </label>
+
+    <!-- Plat 3 -->
+    <input type="checkbox" id="toggle-plat3" class="toggle-input">
+    <label for="toggle-plat3" class="menu-item">
+        <img src="images/pd3 test.PNG" alt="Plat 3">
+        <div class="menu-details">
+            <h3>Formule Prestige</h3>
+            <span>30€/pers</span>
+            <div class="submenu">
+                <ul>
+                    <li>2 Boissons / personne
+                      Boisson chaude (café ou thé)
+                      Jus d’orange pressé</li>
+                    <li>5 Accompagnements / personne
+                    Pancakes maison (x2)
+                    Brioche maison
+                    Verrine de fruits frais
+                    Fromage blanc & granola maison</li>
+                </ul>
+            </div>
+        </div>
+    </label>
+    <!-- Plat 4 -->
+    <input type="checkbox" id="toggle-plat4" class="toggle-input">
+    <label for="toggle-plat4" class="menu-item">
+        <img src="images/pd4 test.PNG" alt="Plat 4">
+        <div class="menu-details">
+            <h3>Le brunch Frenchy</h3>
+            <span>40€/pers</span>
+            <div class="submenu">
+                <ul>
+                    <li>3x Boissons / Personne
+                    Boissons chaudes (café et thé)
+                    Jus d’orange
+                    Smoothie pélican</li>
+                    <li>7x Mets Delicieux 🇫🇷
+                   Viennoiseries (pain au chocolat et croissants)
+                   Fromage blanc granola
+                   Verrine de salade de fruits
+                   Brioche
+                   Planche mixte (charcuterie et fromage)
+                   Croissant salé -jambon fromage </li>
+                </ul>
+            </div>
+        </div>
+    </label>
+    
+
+    <div class="title2">
+                <p>Déjeuner</p>
+            </div>
+    <!-- Plat 1 -->
+    <input type="checkbox" id="toggle-plat1" class="toggle-input">
+    <label for="toggle-plat1" class="menu-item">
+        <img src="images/patte.PNG" alt="Plat 1">
+        <div class="menu-details">
+            <h3>Pâtes crémeuses aux champignons</h3>
+            <span>34€</span>
+            <div class="submenu">
+                <ul>
+                    <li>Découvrez notre menu hebdomadaire : boissons fraîches incluses, dessert de la semaine à savourer</li>
+                    <li>accompagnements de pâtes originaux, tels que des champignons sautés à l'ail et des tomates cerises rôties.</li>
+                  
+                </ul>
+            </div>
+        </div>
+    </label>
+
+    <!-- Plat 2 -->
+    <input type="checkbox" id="toggle-plat2" class="toggle-input">
+    <label for="toggle-plat2" class="menu-item">
+        <img src="images/pizza.PNG" alt="Plat 2">
+        <div class="menu-details">
+            <h3>Pizza aux saveurs de la mer</h3>
+            <span>53€</span>
+            <div class="submenu">
+                <ul>
+                    <li>Explorez notre sélection de pizzas au thon, aux fruits de mer ou au saumon, accompagnées de votre choix de sauce tomate ou blanche.</li>
+                </ul>
+            </div>
+        </div>
+    </label>
+
+  <!-- Plat 3 -->
+<input type="checkbox" id="toggle-plat3" class="toggle-input">
+<label for="toggle-plat3" class="menu-item">
+    <img src="images/truffe.PNG" alt="Plat 3">
+    <div class="menu-details">
+        <h3>Notre incontournable TRUFFE</h3>
+        <span>45€</span>
+        <div class="submenu">
+            <ul>
+                <li>on fait confiance à l’intensité d’un filet d’agneau en croûte de truffe, sauce Périgueux, qui mettra en scène plusieurs techniques de chefs - farce fine, crépine, sauce flambée - tout est bon pour préparer un plat de haute voltige.</li>
+            </ul>
+        </div>
+    </div>
+</label>
+
+<!-- Plat 4 -->
+<input type="checkbox" id="toggle-plat4" class="toggle-input">
+<label for="toggle-plat4" class="menu-item">
+    <img src="images/salade.jpeg" alt="Plat 4">
+    <div class="menu-details">
+        <h3>Salade César au poulet/gambas</h3>
+        <span>25€</span>
+        <div class="submenu">
+            <ul>
+                <li>Une salade César classique avec des morceaux de poulet grillé, des croûtons, du parmesan et une sauce César maison.</li>
+            </ul>
+        </div>
+    </div>
+</label>
+
+   
+    <div class="title3">
+                <p>Diner (Specialites du chef)</p>
+            </div>
+    <!-- Plat 1 -->
+    <input type="checkbox" id="toggle-plat1" class="toggle-input">
+    <label for="toggle-plat1" class="menu-item">
+        <img src="images/saute.PNG" alt="Plat 1">
+        <div class="menu-details">
+            <h3>Sauté de veau aux morilles</h3>
+            <span>45€</span>
+            <div class="submenu">
+                <ul>
+                    <li>Découvrez notre menu hebdomadaire : boissons fraîches incluses, dessert de la semaine à savourer</li>
+                    <li>Le principe ? Faites dorer vos morceaux de veaux dans une cocotte, avec l’oignon et l’ail et la crème liquide sans oublier les carottes ,asperges et puis SAVOUREZ!. </li>
+                 
+                </ul>
+            </div>
+        </div>
+    </label>
+
+    <!-- Plat 2 -->
+    <input type="checkbox" id="toggle-plat2" class="toggle-input">
+    <label for="toggle-plat2" class="menu-item">
+        <img src="images/poulet.PNG" alt="Plat 2">
+        <div class="menu-details">
+            <h3>Poulet grillé aux girolles et crème</h3>
+            <span>39€</span>
+            <div class="submenu">
+                <ul>
+                    <li>Découvrez notre menu hebdomadaire : boissons fraîches incluses, dessert de la semaine à savourer</li>
+                    <li>La recette du poulet grillé aux girolles et crème au vin jaune : et si on revisitait le poulet à la crème et aux champignons ? Si on en faisait un truc encore plus gourmand ?</li>
+                </ul>
+            </div>
+        </div>
+    </label>
+
+    <!-- Plat 3 -->
+    <input type="checkbox" id="toggle-plat3" class="toggle-input">
+    <label for="toggle-plat3" class="menu-item">
+        <img src="images/pattesp.PNG" alt="Plat 3">
+        <div class="menu-details">
+            <h3>Pâtes au citron et au poulet</h3>
+            <span>41€</span>
+            <div class="submenu">
+                <ul>
+                    <li>Découvrez notre menu hebdomadaire : boissons fraîches incluses, dessert de la semaine à savourer</li>
+                    <li>Les pâtes au citron : enfin une bonne recette facile à préparer pour sublimer les pâtes et les délicieux citrons de Sicile.</li>
+                </ul>
+            </div>
+        </div>
+    </label>
+    <div class="menu-item">
+        <img src="images/steack.jpg" alt="Plat 4">
+        <div class="menu-details">
+            <h3> Délicieux Steak au poivre et frites</h3>
+            <span>50€</span>
+            <div class="submenu">
+                <ul>
+                    <li>Découvrez notre menu hebdomadaire : boissons fraîches incluses, dessert de la semaine à savourer</li>
+                    <li>Un steak juteux et tendre, enrobé de poivre concassé et servi avec une sauce au poivre crémeuse.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+</div>
+</div>
+    <!---menu end--->
+     <!---daytime start--->
+    <section id="daytime">
+        <div class="container">
+            <div class="daytime-items">
+                <div class="daytime-item">
+                    <img src="images/breckfastIcon.PNG" alt="breakfast">
+                    <h3>Breakfast</h3>
+                    <p>de 8h a midi</p>
+                    
+                </div>
+                     <div class="daytime-item">
+                    <img src="images/lunchIcon.PNG" alt="lunch">
+                    <h3>Lunch</h3>
+                    <p>de midi a 17h</p>
+                    
+                </div>
+                     <div class="daytime-item">
+                    <img src="images/dinnerIcon.PNG" alt="dinner">
+                    <h3>Dinner</h3>
+                    <p>de 18h a minuit</p>
+                    
+                </div>
+                     <div class="daytime-item">
+                    <img src="images/dessertIcon.PNG" alt="dessert">
+                    <h3>Dessert</h3>
+                    <p>Disponible lors du dejeuner et du diner</p>
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+    </section>
+
+      <!---daytime end--->
+
+      <section id="contact">
+        <div class="content">
+            <h2>Passez votre commande</h2>
+            <p>Nous serons à votre entière disposition pour répondre à vos questions et assurer la prise de vos commandes en ligne directement après soumission du formulaire.</p>
+        </div>
+    
+        <div class="container">
+            <!-- Informations de contact -->
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-map-pin"></i></div>
+                    <div class="text">
+                        <h3>Adresse</h3>
+                        <p>4671 Sugar Camp Road,<br>Owatonna, Minnesota, 55060</p>
+                    </div>
+                </div>
+    
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Téléphone</h3>
+                        <p>507-475-6094</p>
+                    </div>
+                </div>
+    
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>alaouidrai@maviProject-mail.net</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Formulaire de contact -->
+            <div class="contactForm">
+                <h2>Passez votre commande</h2>
+                <form id="orderForm" method="POST">
+                    <div class="form-group">
+                        <div class="inputBox">
+                            <span>Nom complet</span>
+                            <input type="text" name="fullname" required="required">
+                        </div>
+                        <div class="inputBox">
+                            <span>Email</span>
+                            <input type="email" name="email" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="inputBox">
+                            <label for="mealType">Type de repas :</label>
+                            <select id="mealType" name="mealType">
+                                <option value="ptitDej">Petit déjeuner</option>
+                                <option value="dej">Déjeuner</option>
+                                <option value="diner">Dîner</option>
+                            </select>
+                        </div>
+                        <div class="inputBox">
+                            <label for="menuItem">Plat :</label>
+                            <select id="menuItem" name="menuItem"></select>
+                        </div>
+                    </div>
+                    <div class="inputBox">
+                        <span>Adresse</span>
+                        <textarea name="address" required="required"></textarea>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Envoyer">
+                    </div>
+                </form>
+            </div>
+</main>
+<footer>
+<div class="footer">
+<div class="row">
+<a href="#"><i class="fa-brands fa-facebook"></i></a>
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+<a href="#"><i class="fa-brands fa-youtube"></i></a>
+<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+</div>
+
+<div class="row">
+<ul>
+<li><a href="#">Contact us</a></li>
+<li><a href="#">Our Services</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms & Conditions</a></li>
+<li><a href="#">Career</a></li>
+</ul>
+</div>
+
+<div class="row">
+ Copyright © 2025 MAVI - All rights reserved to Zineb
+</div>
+</div>
+</footer>
+<script src="client_page.js"></script>
+</body>
+</html>
+ 

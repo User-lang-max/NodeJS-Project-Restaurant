@@ -1,0 +1,44 @@
+[
+  {
+    "fullname": "alaoui",
+    "email": "cami@gmail.com",
+    "address": "2mars",
+    "mealType": "ptitDej",
+    "menuItem": "Le Pack Essentiel"
+  },
+  {
+    "fullname": "ZINEB ALAOUI",
+    "email": "charles@gmail.com",
+    "address": "casablanca",
+    "mealType": "ptitDej",
+    "menuItem": "Le Pack Essentiel"
+  },
+  {
+    "fullname": "ZINEB ALAOUI",
+    "email": "ZINEB@gmail.com",
+    "address": "marrakech",
+    "mealType": "diner",
+    "menuItem": "Sauté de veau aux morilles"
+  },
+  {
+    "fullname": "ZINEB ALAOUI",
+    "email": "ZINEB@gmail.com",
+    "address": "hermitage",
+    "mealType": "dej",
+    "menuItem": "Pizza aux saveurs de la mer"
+  },
+  {
+    "fullname": "kawtar bennani",
+    "email": "kawtar@gmail.com",
+    "address": "hermitage casablanca ",
+    "mealType": "dej",
+    "menuItem": "Pâtes crémeuses aux champignons"
+  },
+  {
+    "fullname": "IMANE ALAOUI",
+    "email": "IMANE@gmail.com",
+    "address": "ANDALOUSSIA",
+    "mealType": "diner",
+    "menuItem": "Poulet grillé aux girolles et crème"
+  }
+]
