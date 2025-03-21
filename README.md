@@ -33,8 +33,8 @@ Installation
 
 Clone the repository:
 
-git clone https://github.com/your-repo.git
-cd your-repo
+git clone https://github.com/User-lang-max/NodeJS-Project-Restaurant.git
+cd NodeJS-Project-Restaurant
 
 Install dependencies:
 
