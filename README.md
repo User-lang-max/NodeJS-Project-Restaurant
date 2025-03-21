@@ -15,7 +15,7 @@ ADMIN.html: Administration interface to manage users and orders.
 
 client_page.html: Client interface allowing users to book a table and place orders.
 
-comms.html: 
+comms.html: shows the commands passed by the client in the client_page by the formular 
 
 login.html: first page that allows you to login as a admin/user (for admin the user:root , pass :root)
 
@@ -34,6 +34,7 @@ Installation
 Clone the repository:
 
 git clone https://github.com/User-lang-max/NodeJS-Project-Restaurant.git
+
 cd NodeJS-Project-Restaurant
 
 Install dependencies:
